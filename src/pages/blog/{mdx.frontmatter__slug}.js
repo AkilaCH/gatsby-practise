@@ -4,12 +4,12 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../../Components/layout'
 import Seo from '../../Components/seo'
 
-const BlogPost = ({data, children}) => {
-  console.log(data, children)
+const BlogPost = ({ data, children}) => {
+  console.log('Datas are:',data, children)
   const image = getImage(data.mdx.frontmatter.hero_image)
   return (
     <Layout  pageTitle={data.mdx.frontmatter.title}>
-      <p>{data.mdx.frontmatter.date}</p>
+      <p>Posted: {data.mdx.frontmatter.date}</p>
       <GatsbyImage
         image={image}
         alt={data.mdx.frontmatter.hero_image_alt}
