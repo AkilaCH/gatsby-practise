@@ -10,6 +10,7 @@ import {
   } from '../Components/lyaout.module.css'
 
 const Layout = ({ pageTitle, children }) => {
+  //fetch title form GraphQL 
     const data = useStaticQuery(graphql`
         query {
             site {
