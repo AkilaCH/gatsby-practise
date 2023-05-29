@@ -2,6 +2,8 @@ import * as React from 'react'
 import Layout from '../Components/layout'
 import { StaticImage } from 'gatsby-plugin-image'
 import Seo from '../Components/seo.js'
+import { input } from '../Components/lyaout.module.css'
+
 
 const IndexPage = () => {
   return (
@@ -11,6 +13,10 @@ const IndexPage = () => {
         alt="Amazing view is out there"
         src="https://images.unsplash.com/photo-1684737992807-470ed4fe86d4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80"
       />
+      <div className= {input}>
+          <label>text</label>
+          <input type="text" autocorrect="off" autocapitalize="off"/>
+      </div>
     </Layout>
   )
 }
